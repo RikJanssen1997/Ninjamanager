@@ -1,0 +1,19 @@
+﻿<Window x:Class="NinjaManager.EditNinjaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NinjaManager"
+        mc:Ignorable="d"
+        Title="EditNinjaWindow" Height="400" Width="300"
+        ResizeMode="NoResize"
+        DataContext="{Binding EditNinja, Source={StaticResource Locator}}">
+    <StackPanel>
+        <Label>Name</Label>
+        <TextBox Text="{Binding Ninja.Name}"/>
+        <Label>Gold</Label>
+        <TextBox Text="{Binding Ninja.Gold}"/>
+        <Button Command="{Binding EditNinjaCommand}">Save</Button>
+
+    </StackPanel>
+</Window>
